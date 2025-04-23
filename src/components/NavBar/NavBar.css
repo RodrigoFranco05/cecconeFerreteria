@@ -97,3 +97,53 @@ nav{
     margin: 0 20px;
     text-decoration: none;
 }
+
+.droplist_productos{
+    width: 100%;
+    height: fit-content;
+
+    background-color: rgb(48, 47, 47);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    color: aliceblue;
+}
+
+.droplist_productos h3{
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0;
+}
+
+.seccion_1_drop, .seccion_2_drop, .seccion_3_drop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    width: 30%;
+    margin :30px 0;
+}
+
+.seccion_2_drop{
+    border-left: #4b4a4a 1px solid;
+    border-right: #4b4a4a 1px solid;
+    
+}
+
+.droplist_productos li{
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.droplist_productos ul{
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

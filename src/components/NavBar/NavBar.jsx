@@ -26,6 +26,35 @@ console.log("Navbar renderizado");
         </ul>
         </div>
     </nav>
+    <div className='droplist_productos'>
+        <div className='seccion_1_drop'>
+          <h3>Herramientas</h3>
+          <ul>
+            <li>contruccion</li>
+            <li>Manuales</li>
+            <li>Hobbista</li>
+            <li>Industrial</li>
+          </ul>
+        </div>
+        <div className='seccion_2_drop'>
+        <h3>Ferreteria</h3>
+          <ul>
+            <li>descuentos</li>
+            <li>herramientas</li>
+            <li>tuercas</li>
+            <li>tornillos</li>
+          </ul>
+        </div>
+        <div className='seccion_3_drop'>
+        <h3>Equipacion</h3>
+          <ul>
+            <li>hornallas</li>
+            <li>cuchillos</li>
+            <li>linternas</li>
+            <li>otros</li>
+          </ul>
+        </div>
+    </div>
     </header>
   )
 }
