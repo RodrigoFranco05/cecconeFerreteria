@@ -1,0 +1,56 @@
+.categorias-main{
+
+    padding: 20px;
+}
+
+.titulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-categorias {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .subtitulo-categorias {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+
+.grid-lineas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 0px;
+    padding: 20px;
+  }
+  
+  .card-linea {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-linea:hover {
+    transform: scale(1.03);
+  }
+  
+  .nombre-linea {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  }
+  

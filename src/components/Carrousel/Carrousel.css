@@ -1,0 +1,31 @@
+.carousel-container {
+    max-width: 100%;          /* que use el ancho disponible */
+    height: 300px;           /* ajustá esto a tu gusto */
+    overflow: hidden;         /* evita desbordes */
+    margin: auto;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;        /* recorta la imagen si no encaja */
+    height: 100%;             /* que ocupe todo el alto del carrusel */
+    width: 100%;              /* y también todo el ancho */
+  }
+
+
+
+  .carousel-inner{
+    height: 700px;
+  }
+  
+/* 🔁 RESPONSIVE: adaptar altura en pantallas más chicas */
+@media (max-width: 768px) {
+    .carousel-container {
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-container {
+      height: 180px;
+    }
+  }

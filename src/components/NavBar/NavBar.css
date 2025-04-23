@@ -1,0 +1,99 @@
+header{
+
+    width: 100%;
+    background-color: black;
+    box-shadow: 0px 4px 42px 0px rgba(0,0,0,0.75);
+
+    
+}
+
+nav{
+
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+}
+
+.navbar-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.navbar-logo{
+    padding-left: 50px;
+}
+
+.navbar-search{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    background-color: #fdfdfd23;
+    border: #686767 1px solid;
+}
+
+.navbar-search input{
+    width: 90%;
+    height: 33px;
+
+    border: none;
+    padding-left: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    
+}
+
+.navbar-search button{
+    width: 10%;
+    background-color: transparent;
+    border: none;
+}
+
+
+.navbar-cart{
+    padding-right: 50px;
+}
+
+.navbar-links-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-top: #4b4a4a 1px solid;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.navbar-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    
+    list-style: none;
+}
+
+.navbar-links li{
+    padding: 0 20px;
+    font-size: 18px;
+    text-decoration: none;
+    
+}
+
+.navbar-links li a:hover{
+    color: rgb(77, 77, 77);
+    
+}
+
+.navbar-links li a{
+    color: white;
+    font-weight: 300;
+    margin: 0 20px;
+    text-decoration: none;
+}
