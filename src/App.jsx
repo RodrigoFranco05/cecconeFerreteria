@@ -33,7 +33,7 @@ const brandColors = {
   },
   text: {
     primary: "#1A1A1A", // Negro para texto principal
-    secondary: "#666666", // Gris medio para texto secundario
+    secondary: "#FFFFFF", // Gris medio para texto secundario
     disabled: "#CCCCCC", // Gris claro para texto deshabilitado
     hint: "#999999", // Gris para pistas/placeholders
   },
@@ -210,15 +210,16 @@ const App = () => {
   // Definimos variables de ejemplo
 
   return (
+    <ThemeProvider theme={theme}>
+    <CssBaseline />
     <div className='App'>
-    
       <NavBar/>
       <Carrousel/>
       <ProductGrid/>
       <CategoriasMain/>
       <Footer/>
-
     </div>
+  </ThemeProvider>
   )
 }
 
