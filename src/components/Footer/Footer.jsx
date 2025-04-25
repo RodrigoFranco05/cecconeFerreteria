@@ -168,15 +168,15 @@ const Footer = () => {
             <Box>
               <ContactItem>
                 <PhoneIcon />
-                <Typography variant="body2">+5434255387</Typography>
+                <Typography variant="body2">0342 401-5321</Typography>
               </ContactItem>
               <ContactItem>
                 <EmailIcon />
-                <Typography variant="body2">nuestroemail@gmail.com</Typography>
+                <Typography variant="body2">ferreteriacecconce@gmail.com</Typography>
               </ContactItem>
               <ContactItem>
                 <LocationOnIcon />
-                <Typography variant="body2">Calle Falsa 123</Typography>
+                <Typography variant="body2">Av. Aristóbulo del Valle 9596, Santa Fe.</Typography>
               </ContactItem>
             </Box>
           </Grid>
@@ -209,7 +209,7 @@ const Footer = () => {
                 <SocialIconButton aria-label="facebook">
                   <FacebookIcon />
                 </SocialIconButton>
-                <SocialIconButton aria-label="instagram">
+                <SocialIconButton aria-label="instagram" component="a" href="https://www.instagram.com/cecconeferreteria/" target="_blank" rel="noopener noreferrer" sx={{ color: 'inherit', '&:hover': { color: 'inherit' } }}>
                   <InstagramIcon />
                 </SocialIconButton>
                 <SocialIconButton aria-label="twitter">
