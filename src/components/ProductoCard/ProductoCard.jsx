@@ -58,13 +58,13 @@ const InstallmentText = styled(Typography)(() => ({
 const ProductoCard = ({
   image,
   name,
-  price,
+  precio,
   currency = "$",
   previousPrice,
   discount,
   isNew = false,
   freeShipping = false,
-  description,
+  itemDatoAtributo3,
   inStock = true,
   soldOut = false,
   installments,
@@ -161,13 +161,13 @@ const ProductoCard = ({
         backgroundColor: "#FFFFFF", // Asegura fondo blanco para el contenido
       }}>
         {/* Brand or category */}
-        {variant === "detailed" && description && (
+        {variant === "detailed" && itemDatoAtributo3 && (
           <Typography 
             variant="caption" 
             sx={{ color: brandColors.mediumGray }} 
             gutterBottom
           >
-            {description.split(" ")[0]}
+            {itemDatoAtributo3.split(" ")[0]}
           </Typography>
         )}
 
@@ -209,8 +209,8 @@ const ProductoCard = ({
                 fontWeight: "bold",
               }}
             >
-              {currency} {formatPrice(price)}
-              {price.toString().includes(".") ? "" : variant === "detailed" ? <sup>00</sup> : ""}
+              {currency} {formatPrice(precio)}
+              {precio.toString().includes(".") ? "" : variant === "detailed" ? <sup>00</sup> : ""}
             </Typography>
 
             {inStock && !soldOut && <StockLabel variant="caption">en stock</StockLabel>}

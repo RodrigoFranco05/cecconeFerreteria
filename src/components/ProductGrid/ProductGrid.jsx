@@ -1,3 +1,4 @@
+
 import { Typography, Box, Container } from "@mui/material"
 import ProductoCard from "../ProductoCard/ProductoCard"
 
@@ -15,91 +16,15 @@ const brandColors = {
   veryLightGray: "#F5F5F5", // Gris muy claro
 }
 
-const ProductGrid = () => {
-  const products = [
-    {
-      id: 1,
-      image: "../../../public/BLT112.webp",
-      name: "Atornillador de impacto BLT112",
-      price: 349576.73,
-      previousPrice: 537810.35,
-      discount: 35,
-      description: "Hamilton",
-      isNew: true,
-      soldOut: false,
-      freeShipping: true,
-      installments: {
-        count: 6,
-        amount: 70497.97,
-      },
-      variant: "detailed",
-    },
-    {
-      id: 2,
-      image: "../../../public/BLT112.webp",
-      name: "Atornillador de impacto BLT112",
-      price: 349576.73,
-      description: "Hamilton",
-      isNew: true,
-      soldOut: false,
-      freeShipping: false,
-      installments: {
-        count: 6,
-        amount: 70497.97,
-      },
-      variant: "detailed",
-    },
-    {
-      id: 3,
-      image: "../../../public/BLT112.webp",
-      name: "Atornillador de impacto BLT112",
-      price: 349576.73,
-      previousPrice: 537810.35,
-      discount: 5,
-      description: "Hamilton",
-      isNew: false,
-      soldOut: false,
-      freeShipping: true,
-      installments: {
-        count: 6,
-        amount: 70497.97,
-      },
-      variant: "detailed",
-    },
-    {
-      id: 4,
-      image: "../../../public/BLT112.webp",
-      name: "Atornillador de impacto BLT112",
-      price: 349576.73,
-      description: "Hamilton",
-      isNew: false,
-      soldOut: false,
-      freeShipping: false,
-      installments: {
-        count: 6,
-        amount: 70497.97,
-      },
-      variant: "detailed",
-    },
-    {
-      id: 5,
-      image: "../../../public/BLT112.webp",
-      name: "Atornillador de impacto BLT112",
-      price: 349576.73,
-      previousPrice: 537810.35,
-      discount: 35,
-      description: "Hamilton",
-      isNew: false,
-      soldOut: true,
-      freeShipping: true,
-      installments: {
-        count: 6,
-        amount: 70497.97,
-      },
-      variant: "detailed",
-    },
-  ]
+const ProductGrid = (props) => {
+  console.log(props.productos)
+  const productos = props.productos;
 
+  if(productos==undefined || productos.length===0){
+    return <p>No hay productos disponibles</p>;
+  }
+
+  console.log(props.productos)
   return (
     <Box sx={{ backgroundColor: brandColors.cream, py: 4 }}>
       <Container 
@@ -131,7 +56,7 @@ const ProductGrid = () => {
             }
           }}
         >
-          Productos Destacados
+          {props.title}
         </Typography>
 
         {/* Contenedor con scroll horizontal en pantallas pequeñas */}
@@ -171,7 +96,7 @@ const ProductGrid = () => {
               gap: 3,
             }}
           >
-            {products.map((product) => (
+            {productos.map((product) => (
               <Box
                 key={product.id}
                 sx={{

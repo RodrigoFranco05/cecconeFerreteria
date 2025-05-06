@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import {
   Box,
   Container,
@@ -18,6 +19,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import './Footer.css';
 
 // Paleta de colores de la marca
 const brandColors = {
@@ -32,19 +34,6 @@ const brandColors = {
   lightGray: "#CCCCCC",   // Gris claro
   veryLightGray: "#F5F5F5", // Gris muy claro
 };
-
-// Logo SVG creado con los colores de la marca (igual que en el NavBar)
-const logoSvg = `
-<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="40" height="40" rx="8" fill="#EC6500"/>
-  <path d="M8 20L16 12L32 28L24 36L8 20Z" fill="#FFFCF5"/>
-  <path d="M24 12L32 20L24 28L16 20L24 12Z" fill="#FFFCF5"/>
-  <text x="48" y="26" font-family="Arial" font-weight="bold" font-size="16" fill="#FFFCF5">MARCA</text>
-</svg>
-`;
-
-// Convertir SVG a formato data URL
-const logoDataUrl = `data:image/svg+xml;base64,${btoa(logoSvg)}`;
 
 // Componentes estilizados
 const FooterContainer = styled(Box)(({ theme }) => ({
@@ -83,6 +72,7 @@ const FooterTitle = styled(Typography)(({ theme }) => ({
   }
 }));
 
+// Estilo para Link de MUI (para los enlaces que no son de navegación)
 const FooterLink = styled(Link)(({ theme }) => ({
   color: brandColors.cream,
   textDecoration: 'none',
@@ -94,6 +84,25 @@ const FooterLink = styled(Link)(({ theme }) => ({
     color: brandColors.primaryLight,
     transform: 'translateX(5px)',
     textDecoration: 'none',
+  }
+}));
+
+// Nuevo componente estilizado para NavLink de react-router-dom
+const LinkNav = styled(NavLink)(({ theme }) => ({
+  color: brandColors.cream,
+  textDecoration: 'none',
+  fontSize: '0.95rem',
+  marginBottom: theme.spacing(1.5),
+  display: 'block',
+  transition: 'color 0.2s, transform 0.2s',
+  '&:hover': {
+    color: brandColors.primaryLight,
+    transform: 'translateX(5px)',
+    textDecoration: 'none',
+  },
+  '&.active': {
+    color: brandColors.primary,
+    fontWeight: 500,
   }
 }));
 
@@ -148,17 +157,17 @@ const Footer = () => {
             <FooterTitle variant="h6">Navegación</FooterTitle>
             <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
               <Box component="li">
-                <FooterLink href="#inicio">Inicio</FooterLink>
+                <LinkNav to="/">Inicio</LinkNav>
               </Box>
               <Box component="li">
-                <FooterLink href="#productos">Productos</FooterLink>
+                <LinkNav to="/productos">Productos</LinkNav>
               </Box>
               <Box component="li">
-                <FooterLink href="#contacto">Contacto</FooterLink>
+                <LinkNav to="/contacto">Contacto</LinkNav>
               </Box>
-              <Box component="li">
-                <FooterLink href="#nosotros">Nosotros</FooterLink>
-              </Box>
+              {/* <Box component="li">
+                <LinkNav to="/nosotros">Nosotros</LinkNav>
+              </Box> */}
             </Box>
           </Grid>
 
@@ -186,16 +195,16 @@ const Footer = () => {
             <FooterTitle variant="h6">Categorías</FooterTitle>
             <Box component="ul" sx={{ listStyle: 'none', p: 0, m: 0 }}>
               <Box component="li">
-                <FooterLink href="#herramientas">Herramientas</FooterLink>
+                <LinkNav to="/herramientas">Herramientas</LinkNav>
               </Box>
               <Box component="li">
-                <FooterLink href="#ferreteria">Ferretería</FooterLink>
+                <LinkNav to="/ferreteria">Ferretería</LinkNav>
               </Box>
               <Box component="li">
-                <FooterLink href="#equipacion">Equipación</FooterLink>
+                <LinkNav to="/equipacion">Equipación</LinkNav>
               </Box>
               <Box component="li">
-                <FooterLink href="#ofertas">Ofertas</FooterLink>
+                <LinkNav to="/ofertas">Ofertas</LinkNav>
               </Box>
             </Box>
           </Grid>

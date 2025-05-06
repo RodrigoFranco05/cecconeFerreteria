@@ -2,12 +2,14 @@ import React from 'react'
 import './App.css'
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
-import Carrousel from './components/Carrousel/Carrousel';
-import ItemMasVendidos from './components/ItemMasVendidos/ItemMasVendidos';
-import CategoriasMain from './components/CategoriasMain/CategoriasMain';
+import Inicio from './components/Inicio/Inicio';
+import Productos from './components/Productos/Productos';
+import Contacto from './components/Contacto/Contacto';
+import Carrito from './components/Carrito/Carrito';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import { ThemeProvider, createTheme, CssBaseline, Box } from "@mui/material"
-import ProductGrid from './components/ProductGrid/ProductGrid';
+
 
 // Paleta de colores de la marca
 const brandColors = {
@@ -210,16 +212,22 @@ const App = () => {
   // Definimos variables de ejemplo
 
   return (
+  <BrowserRouter>
     <ThemeProvider theme={theme}>
     <CssBaseline />
     <div className='App'>
-      <NavBar/>
-      <Carrousel/>
-      <ProductGrid/>
-      <CategoriasMain/>
-      <Footer/>
+    <NavBar/>
+      <Routes>
+        <Route path="/" element={<Inicio/>}/>
+        <Route path="/productos" element={<Productos/>}/>
+        <Route path="/contacto" element={<Contacto/>}/>
+        <Route path="/carrito" element={<Carrito/>}/>
+      </Routes>
+    <Footer/>
+
     </div>
   </ThemeProvider>
+  </BrowserRouter>
   )
 }
 

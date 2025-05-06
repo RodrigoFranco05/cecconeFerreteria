@@ -1,31 +1,35 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
 import './ItemMasVendidos.css'
-import {
-  Card,
-  CardMedia,
-  CardContent,
-  Typography,
-  CardActions,
-  Button
-} from '@mui/material';
-
 import ProductGrid from '../ProductGrid/ProductGrid';
 
-const ItemMasVendidos = () => {
+
+const ItemMasVendidos = (props) => {
+  const [items, setItems] = useState([]);
+    const [loading, setLoading] = useState(true);
   
+    useEffect(() => {
+      fetch("/items_prueba.json")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Error al cargar el archivo JSON");
+          }
+          return response.json();
+        })
+        .then((data) => {
+          setItems(data);
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.error("Error al obtener los datos:", error);
+          setLoading(false);
+        });
+    }, []);
+  
+    if (loading) return <p>Cargando datos...</p>;
 
   return (
-    <div className='ItemMasVendidos'>
-      
-      <Typography variant="h4" component="h1" gutterBottom sx={{ mb: 4 }}>
-        Items mas VENDIDOS!
-      </Typography>
-   
-    <div className='ItemsVendidos'>
-      
-        <ProductGrid />
-   
-    </div>
+    <div className='ItemsMasVendidos'>
+        <ProductGrid title={props.title} productos={items.slice(0, 5)}/>
     </div>
   );
 };
