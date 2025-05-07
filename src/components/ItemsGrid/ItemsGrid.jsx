@@ -1,6 +1,9 @@
 import React,{useState, useEffect} from 'react'
 import { Typography, Box, Container ,Grid} from "@mui/material"
 import ProductoCard from "../ProductoCard/ProductoCard"
+import { fetchProducts, filterProducts,getFilterOptions } from '../../services/productService';
+import FilterPanel from '../FilterPanel/FilterPanel';
+
 
 const brandColors = {
     primary: "#EC6500",     // Naranja principal
@@ -18,28 +21,56 @@ const brandColors = {
 
 const ItemsGrid = () => {
 
-  const [items, setItems] = useState([]);
+//   const [items, setItems] = useState([]);
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     fetch("/items_prueba.json")
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error("Error al cargar el archivo JSON");
+//         }
+//         return response.json();
+//       })
+//       .then((data) => {
+//         setItems(data);
+//         setLoading(false);
+//       })
+//       .catch((error) => {
+//         console.error("Error al obtener los datos:", error);
+//         setLoading(false);
+//       });
+//   }, []);
+
+//   if (loading) return <p>Cargando datos...</p>;
+
+const [allItems, setAllItems] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([]);
+  const [filters, setFilters] = useState({ marca: '', tipo: '', color: '' });
   const [loading, setLoading] = useState(true);
+  const [filterOptions, setFilterOptions] = useState({ marcas: [], tipos: [], colores: [] }); // <- nuevo
 
   useEffect(() => {
-    fetch("/items_prueba.json")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error al cargar el archivo JSON");
-        }
-        return response.json();
-      })
+    fetchProducts()
       .then((data) => {
-        setItems(data);
+        setAllItems(data);
+        setFilteredItems(data); // mostrar todo inicialmente
+        setFilterOptions(getFilterOptions(data)); // <- nuevo
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error al obtener los datos:", error);
+        console.error('Error:', error);
         setLoading(false);
       });
   }, []);
 
-  if (loading) return <p>Cargando datos...</p>;
+  useEffect(() => {
+    const resultado = filterProducts(allItems, filters);
+    setFilteredItems(resultado);
+  }, [filters, allItems]);
+
+  if (loading) return <p>Cargando...</p>;
+
 
   return (
     <Box sx={{ backgroundColor: brandColors.cream, py: 4 }}>
@@ -74,10 +105,12 @@ const ItemsGrid = () => {
       >
         Lista de Productos
       </Typography>
+
+      <FilterPanel setFilters={setFilters}  options={filterOptions}/>
   
       {/* Grid de productos en múltiples filas y 4 columnas */}
       <Grid container spacing={3}>
-        {items.map((item) => (
+        {filteredItems.map((item) => (
           <Grid 
             item 
             xs={12}      // En móviles: 1 columna (ancho completo)
@@ -103,7 +136,7 @@ const ItemsGrid = () => {
       </Grid>
   
       {/* Si no hay productos, muestra un mensaje */}
-      {items.length === 0 && (
+      {filteredItems.length  === 0 && (
         <Box sx={{ textAlign: "center", py: 5 }}>
           <Typography variant="body1" color="text.secondary">
             No se encontraron productos.
