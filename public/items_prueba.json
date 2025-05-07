@@ -24,6 +24,9 @@
     "freeShipping": false,
     "codigoScanner": "SCN-0001",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 3,
       "amount": 333.33
@@ -55,6 +58,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0002",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 4,
       "amount": 275.0
@@ -86,6 +92,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0003",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",    
     "installments": {
       "count": 5,
       "amount": 240.0
@@ -117,6 +126,9 @@
     "freeShipping": false,
     "codigoScanner": "SCN-0004",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 6,
       "amount": 216.67
@@ -148,6 +160,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0005",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 3,
       "amount": 466.67
@@ -179,6 +194,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0006",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 4,
       "amount": 375.0
@@ -210,6 +228,9 @@
     "freeShipping": false,
     "codigoScanner": "SCN-0007",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 5,
       "amount": 320.0
@@ -241,6 +262,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0008",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 6,
       "amount": 283.33
@@ -272,6 +296,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0009",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 3,
       "amount": 600.0
@@ -303,6 +330,9 @@
     "freeShipping": false,
     "codigoScanner": "SCN-0010",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 4,
       "amount": 475.0
@@ -334,6 +364,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0011",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 5,
       "amount": 400.0
@@ -365,6 +398,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0012",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 6,
       "amount": 350.0
@@ -396,6 +432,9 @@
     "freeShipping": false,
     "codigoScanner": "SCN-0013",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 3,
       "amount": 733.33
@@ -427,6 +466,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0014",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 4,
       "amount": 575.0
@@ -458,6 +500,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0015",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 5,
       "amount": 480.0
@@ -489,6 +534,9 @@
     "freeShipping": false,
     "codigoScanner": "SCN-0016",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 6,
       "amount": 416.67
@@ -520,6 +568,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0017",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 3,
       "amount": 866.67
@@ -551,6 +602,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0018",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 4,
       "amount": 675.0
@@ -582,6 +636,9 @@
     "freeShipping": false,
     "codigoScanner": "SCN-0019",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 5,
       "amount": 560.0
@@ -613,6 +670,9 @@
     "freeShipping": true,
     "codigoScanner": "SCN-0020",
     "variant": "detailed",
+    "isFeatured": true,
+    "ventasMensuales": 120,
+    "fechaCreacion": "2024-11-01T12:00:00Z",
     "installments": {
       "count": 6,
       "amount": 483.33
